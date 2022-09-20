@@ -1,0 +1,366 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+#heroText {
+  margin-bottom: 10rem;
+}
+
+#heroText h1 {
+  font-family: var(--font-hero);
+  font-size: 8rem;
+  line-height: 1;
+  color: white;
+  text-shadow: 
+  -1px 1px 1px black,
+  -2px 1px 1px black,
+  -3px 2px 1px black,
+  -4px 2px 1px black,
+  -5px 3px 1px black,
+  -6px 3px 1px black,
+  -7px 4px 1px black,
+  -8px 4px 1px black,
+  -9px 5px 1px black;
+}
+
+#heroText h2 {
+  font-family: var(--font-hero);
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  color: white;
+  text-shadow: 
+  -1px 1px 1px black,
+  -2px 1px 1px black,
+  -3px 2px 1px black,
+  -4px 2px 1px black,
+  -5px 3px 1px black;
+}
+
+#typewriter {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background-color: var(--blue-color);
+}
+
+.typewriter h2 {
+  font-size: clamp(0.75rem, 2.25vw + 0.75rem, 3rem);
+}
+
+.typewriter h1 {
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  position: relative;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.typewriter #word::before, #word::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.typewriter h1::before {
+  background: var(--blue-color);
+  animation: typewriter 2s
+    steps(24) 1s forwards;
+}
+
+.typewriter h1::after {
+  width: 0.125em;
+  background: blackv;
+  animation: typewriter 2s
+      steps(24) 1s forwards,
+    blink 750ms steps(24) infinite;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  from { background: transparent } 
+  to {
+    background: black;
+  }
+}
+
+#featuredFramework {
+  padding: 20px;
+  flex-wrap: wrap;
+  background-color:#065ae1 !important;
+  width: 100%;
+  height: 100%;
+}
+
+#frameworkLogo {
+  min-height: 100px;
+  max-height: 100px;
+  min-width: 100px;
+  max-width: 100px;
+}
+
+#frameworkLogo:hover {
+  border-color: black;
+  border-left-width: 4px;
+  border-bottom-width: 4px;
+  border-right-width: 3px;
+  border-top-width: 3px;
+  transform: scale(1.1);
+}
+
+#frameworkLogo h1 {
+  display: none;
+}
+
+#frameworkLogo:hover h1 {
+  display: flex;
+}
+
+#frameworkLogo:hover img {
+  display: none;
+}
+
+#projectText {
+  font-size: 4rem;
+  text-shadow: 
+  -1px 1px 1px black,
+  -2px 1px 1px black,
+  -3px 2px 1px black,
+  -4px 2px 1px black,
+  -5px 3px 1px black,
+  -6px 3px 1px black,
+  -7px 4px 1px black,
+  -8px 4px 1px black,
+  -9px 5px 1px black;
+}
+
+#projectCard:hover {
+  animation: 500ms linear;
+  border-color: black;
+  border-left-width: 8px;
+  border-bottom-width: 8px;
+  border-right-width: 6px;
+  border-top-width: 5px;
+}
+
+#svgTransition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-image: url('../public/layeredpeaks2.svg');
+  background-color: #15202B;
+  background-position-x: middle;
+  background-position-y: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100%;
+  margin: 50px 0px 0px 0px;
+  z-index: 50;
+  padding-bottom: 20px;
+}
+
+#svgTransitionPeaks {
+  background-image: url('../public/stackedpeaks4.svg');
+  background-position-x: right;
+  background-position-y: 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  margin-top: -2px;
+  padding-bottom: 40px;
+}
+
+#softBounce:hover {
+  animation: 1.5s infinite;
+  animation-name: softBounce;
+}
+
+@keyframes softBounce {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(8%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+#contactForm {
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+  -o-transform: skewY(-2deg);
+  transform: skewY(-2deg);
+  border-top: 4px solid black;
+  margin-top: -50px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: initial;
+}
+
+#contactCard {
+  -webkit-transform: skewY(2deg);
+  -moz-transform: skewY(2deg);
+  -ms-transform: skewY(2deg);
+  -o-transform: skewY(2deg);
+  transform: skewY(2deg);
+}
+
+
+@media only screen and (max-width: 1400px) {
+  #frameworkLogo {
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #heroText {
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #featuredFramework {
+    margin: 0px;
+    padding-inline: 10px;
+  }
+
+  #frameworkLogo {
+    margin: 8px;
+  }
+
+  #formInputWrapper {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {  
+  #featuredFramework {
+    padding-inline: 2px;
+  }
+
+  #frameworkLogo {
+    min-width: 75px;
+    max-width: 75px;
+    min-height: 75px;
+    max-height: 75px;
+  }
+
+  #frameworkLogoName {
+    font-size: 12px;
+    line-height: normal;
+  }
+
+  #heroText h1 {
+    font-size: 5rem;
+  }
+
+  #heroText h2 {
+    font-size: 1.5rem;
+  }
+
+  #svgTransition {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  #contactCard {
+    padding-top: 20px;
+    margin: 0px 5px 0px;
+  }
+
+  #contactCard form {
+    padding: 20px;
+    padding-bottom: 20px;
+  }
+
+  #formColumn {
+    padding: 3px;
+  }
+
+
+}
+
+@media only screen and (max-width: 450px) {
+  #projectCard {
+    width: 100%;
+    margin: 20px 10px 20px 15px;
+  }
+
+  #projectCardAcquired {
+    left: 10px;
+  }
+
+  #svgTransition {
+    margin: 50px 0px 0px 0px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #projectCard {
+    width: 100%;
+  }
+
+  #heroText h1 {
+    margin: 0px;
+  }
+
+  #heroText h1 {
+  font-size: 4rem;
+  }
+
+  #projectText {
+    font-size: 3rem;
+  }
+  
+  #frameworkLogo {
+    padding: 6px;
+    margin: 8px;
+  }
+
+  #featuredFramework {
+    padding: 20px 0px 20px 0px;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  #frameworkLogo {
+    min-width: 75px;
+    min-height: 75px;
+    max-width: 75px;
+    max-height: 75px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .code {
+    background: #111;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+}
