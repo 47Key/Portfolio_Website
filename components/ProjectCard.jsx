@@ -1,7 +1,7 @@
-import Link from "next/link";
 import React, { useState } from "react";
-import styles from "../styles/Home.module.css";
+import Image from "next/image";
 import LiftedButton from "./LiftedButton";
+import styles from "../styles/Home.module.css";
 
 const ProjectCard = ({ image, projectName, briefDescription, fullDescription, builtWith, logos, acquired, githubLink, websiteLink }) => {
     const [moreInfo, setMoreInfo] = useState(false);
@@ -36,15 +36,16 @@ const ProjectCard = ({ image, projectName, briefDescription, fullDescription, bu
                     <LiftedButton onClick={() => setMoreInfo(true)} name="More Info" svg={false} />
                 }
                 <div className="flex flex-row justify-between w-full -mb-3 px-10">
+                    {/* Used anchor tags to enable the "open in new tab" functionality, Next/Link does not allow this.*/}
                     {githubLink &&
-                        <Link href={`${githubLink}`}>
-                            <img className="w-10 mt-5 cursor-pointer" alt="Github Link" src="github-black.svg" />
-                        </Link>
+                        <a className="cursor-pointer mt-5" href={`${githubLink}`}>
+                            <Image width={50} height={50} alt="Github Link" src="/github-black.svg" />
+                        </a>
                     }
                     {websiteLink &&
-                        <Link href={`${websiteLink}`}>
-                            <img className="w-10 mt-5 cursor-pointer" alt="Website Link" src="website.svg" />
-                        </Link>
+                        <a className="cursor-pointer mt-5" href={`${websiteLink}`}>
+                            <Image width={50} height={50} alt="Website Link" src="/website.svg" />
+                        </a>
                     }
                 </div>
 
@@ -54,7 +55,7 @@ const ProjectCard = ({ image, projectName, briefDescription, fullDescription, bu
                 <div className="w-full flex flex-row justify-evenly">
                     {logos.map((value, key) => {
                         return (
-                            <img key={key} alt={value} loading="lazy" className="w-[50px] h-[50px]" src={value}/>
+                            <Image key={key} alt={value} loading="lazy" width={50} height={50} src={value}/>
                             );
                         })}
                 </div>
