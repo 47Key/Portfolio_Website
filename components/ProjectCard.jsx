@@ -7,7 +7,7 @@ const ProjectCard = ({ image, projectName, briefDescription, fullDescription, bu
     const [moreInfo, setMoreInfo] = useState(false);
 
     return (
-        <div id={styles.projectCard} className="bg-[#fafafa] w-[400px] mx-5 my-10 min-h-[50em] min-w-[300px] max-w-[400px] flex flex-col justify-between items-center rounded-[15px] shadow-black shadow-[-8px_5px_0px] hover:shadow-black hover:shadow-[-8px_13px_2px] border-black border-8 duration-300 hover:border-black">
+        <div id={styles.projectCard} className="bg-[#fafafa] w-[400px] mx-5 my-10 min-h-[51em] min-w-[300px] max-w-[400px] flex flex-col justify-between items-center rounded-[15px] shadow-black shadow-[-8px_5px_0px] hover:shadow-black hover:shadow-[-8px_13px_2px] border-black border-8 duration-300 hover:border-black">
             <div className="bg-black w-full ml-0.5 p-0 shadow-black shadow-[-2px_-1px_0px] border-black border-[0px_0px_2px_0px]">
                 <img
                 loading="lazy" 
@@ -39,12 +39,12 @@ const ProjectCard = ({ image, projectName, briefDescription, fullDescription, bu
                     {/* Used anchor tags to enable the "open in new tab" functionality, Next/Link does not allow this.*/}
                     {githubLink &&
                         <a className="cursor-pointer mt-5" href={`${githubLink}`}>
-                            <Image width={50} height={50} alt="Github Link" src="/github-black.svg" />
+                            <Image width={40} height={40} alt="Github Link" src="/github-black.svg" />
                         </a>
                     }
                     {websiteLink &&
                         <a className="cursor-pointer mt-5" href={`${websiteLink}`}>
-                            <Image width={50} height={50} alt="Website Link" src="/website.svg" />
+                            <Image width={40} height={40} alt="Website Link" src="/website.svg" />
                         </a>
                     }
                 </div>
