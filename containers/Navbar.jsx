@@ -17,9 +17,9 @@ const Navbar = () => {
                <Navlink title="About Me" route="/#about" />
                <Navlink title="Contact" route="/#contact" />
               </nav>
-              <a href="/public/ryley-keegan_resume.pdf" download>
+              <Link href="/ryley-keegan_resume.pdf" locale={false}>
                 <LiftedButton name="Resume" svg="true" />
-              </a>
+              </Link>
             </div>
           </div>
         </header>
