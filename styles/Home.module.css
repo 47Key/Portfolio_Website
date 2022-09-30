@@ -174,6 +174,8 @@
   padding-bottom: 20px;
 }
 
+/*Fix z-index issues on svgTransition and about sections*/
+
 #svgTransitionPeaks {
   background-image: url('../public/stackedpeaks4.svg');
   background-position-x: right;
