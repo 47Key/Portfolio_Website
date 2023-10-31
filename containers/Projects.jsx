@@ -11,7 +11,7 @@ const Projects = ({ projects }) => {
             <div className="flex flex-row flex-wrap w-full h-full justify-center align-baseline items-center font-main">
                 {projects.map((project, key) => {
                     return (
-                        <ProjectCard key={key} image={project.image} projectName={project.name} briefDescription={project.briefDescription} fullDescription={project.fullDescription} builtWith={project.builtWith} logos={project.logos} acquired={project.acquired} githubLink={project.githubLink} websiteLink={project.websiteLink}/>
+                        <ProjectCard key={key} projectInfo={project} />
                     );
                 })
                 }

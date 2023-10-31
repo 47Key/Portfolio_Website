@@ -18,7 +18,10 @@ const Navbar = () => {
                <Navlink title="Contact" route="/#contact" />
               </nav>
               <Link href="/ryley-keegan_resume.pdf" locale={false}>
-                <LiftedButton name="Resume" svg="true" />
+                <LiftedButton 
+                name="Resume" 
+                svg={false} 
+                className="bg-blue-500 hover:text-blue-500 hover:border-blue-500 font-bold text-base mr-5" />
               </Link>
             </div>
           </div>
